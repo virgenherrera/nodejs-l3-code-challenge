@@ -19,13 +19,40 @@ Challenge instructions:
 ## Endpoint requirements:
 * All endpoints should use the prefix `api`.
 * Any error must be sent to the global handler, without forgetting to add the "type" property with the corresponding type of error.
-* Additionally develop the following endpoints:
-  * Develop a __GET__ endpoint `fibonacci/:iterator` that will implement the  following behaviours:
-    * Validate that the segment `iterator` is a positive integer.
-    * Will return an array that will contain all the fibonacci sequence numbers delimited by the `iterator` argument.
-  * Develop a __POST__ endpoint `unique` that will that will implement the following behaviours:
-    * Extract the contained data from Request `body.data` amd validate that is an array of **primitive** values.
-    * Will respond with an object containing the array without duplicates as well a property unique indicating if the original `body.data` was containing only unique values. e.g.
+
+## __GET__ endpoint `fibonacci/:iterator`
+You must to develop an __GET__ endpoint `fibonacci/:iterator` that will implement the  following behaviours:
+  * Validate that the segment `iterator` is a positive integer.
+  * Will return an array that will contain all the fibonacci sequence numbers delimited by the `iterator` argument.
+
+### Example Request1
+```
+GET /api/fibonacci/8
+```
+
+### Example Response1
+```
+{
+    data: [0, 1, 1, 2, 3, 5, 8, 13, 21]
+}
+```
+
+### Example Request2
+```
+GET /api/fibonacci/13
+```
+
+### Example Response1
+```
+{
+    data: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
+}
+```
+
+## __POST__ endpoint `unique`
+You must to develop a __POST__ endpoint `unique` that will that will implement the following behaviours:
+  * Extract the contained data from Request `body.data` amd validate that is an array of **primitive** values.
+  * Will respond with an object containing the array without duplicates as well a property unique indicating if the original `body.data` was containing only unique values. e.g.
 
 ### Example Request1
 ```
@@ -58,3 +85,6 @@ POST /api/unique
     data: [1,2]
 }
 ```
+
+### Code Coverage
+Code coverage should be above 55%.
