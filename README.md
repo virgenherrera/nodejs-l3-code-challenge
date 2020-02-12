@@ -88,3 +88,6 @@ POST /api/unique
 
 ### Code Coverage
 Code coverage should be above 55%.
+
+### ...to end
+Once you have completed the tasks of the challenge you must commit and send the changes to your fork, as well as create a pull request with your proposal.
